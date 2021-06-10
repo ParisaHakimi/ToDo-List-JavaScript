@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 128, 0, 0.5), rgba(0, 0, 255, 0.5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.wrapper {
+    width: 70%;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 255, 0.8);
+}
+
+.todo {
+    font-size: 1.6rem;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: rgba(0, 0, 255, 0.8);
+}
+
+form input {
+    height: 40px;
+    min-width: 30rem;
+    padding-left: 20px;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid rgba(128, 0, 128, 0.6);
+}
+
+form button {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(128, 0, 128, 0.6);
+    border: none;
+    transition: .5s;
+}
+
+form button:hover {
+    background-color: rgba(128, 0, 128, 0.8);
+}
+
+button a {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.list {
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.list .list-item span {
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list .list-item:not(:last-child) {
+    border-bottom: 1px solid rgba(128, 0, 128, 0.60);
+}
+
+.list .list-item span i {
+    color: rgba(128, 0, 128, 0.9);
+}
+
+.clear {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    height: 30px;
+}
+
+.clear .pending {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 128, 0, 0.986);
+}
+
+.clear .clear-tasks {
+    background-color: rgba(128, 0, 128, 0.6);
+    color: #fff;
+    width: 100px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.clear .clear-tasks:hover {
+    background-color: rgba(128, 0, 128, 0.8);
+}
+
+
+/* responsive */
+
+@media screen and (min-width: 768px) and (max-width: 940px) {
+    form input {
+        min-width: 25rem;
+    }
+    .list .list-item span {
+        margin-bottom: 10px;
+    }
+    .list {
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    form input {
+        min-width: 17rem;
+    }
+    .list {
+        padding: 7px;
+    }
+    .list .list-item span {
+        margin-bottom: 10px;
+    }
+}
